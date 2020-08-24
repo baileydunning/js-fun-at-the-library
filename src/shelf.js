@@ -4,8 +4,15 @@ function shelfBook(book, shelf) {
   }
 }
 
+var i
+
 function unshelfBook(book, shelf) {
-  return shelf.splice(i, 1)
+  for (var i = 0; i < shelf.length; i++) {
+    if (shelf[i].title == book) {
+      shelf.splice(i, 1)
+    }
+  }
+  return shelf
 }
 
 var bookTitles = [];

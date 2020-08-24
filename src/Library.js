@@ -27,10 +27,14 @@ function checkoutBook(library, book) {
       library.shelves.fiction.splice(i, 1)
       return `You have now checked out ${book} from the Denver Public Library`
     }
+  }
+  for (var i = 0; i < library.shelves.nonFiction.length; i++) {
     if (library.shelves.nonFiction[i].title.includes(book)) {
       library.shelves.nonFiction.splice(i, 1)
       return `You have now checked out ${book} from the Denver Public Library`
     }
+  }
+  for (var i = 0; i < library.shelves.fantasy.length; i++) {
     if (library.shelves.fantasy[i].title.includes(book)) {
       library.shelves.fantasy.splice(i, 1)
       return `You have now checked out ${book} from the Denver Public Library`
